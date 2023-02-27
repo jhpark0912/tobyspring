@@ -1,6 +1,7 @@
 package tobyspring.helloboot;
 
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -22,6 +23,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 @interface UnitTest {
 }
 
+
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.NONE)
 class HelloServiceTest {
     @UnitTest
     void simpleHelloService () {
